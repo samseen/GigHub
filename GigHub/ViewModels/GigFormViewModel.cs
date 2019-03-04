@@ -20,9 +20,9 @@ namespace GigHub.ViewModels
         [Required]
         public byte Genre { get; set; }
         public IEnumerable<Genre> Genres { get; set; }
-        public DateTime DateTime
+        public DateTime GetDateTime()
         {
-            get { return DateTime.Parse(string.Format("{0} {1}", Date, Time)); }
+            return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
     }
 }
